@@ -1,0 +1,532 @@
+/* 
+1.0 Base
+    1.1 Base
+    1.2 Header
+    1.3 Footer
+    
+2.0 Content
+    2.1 Home Page
+    2.2 Blog Content
+*/
+
+@import "./base/_base.less";
+@import "./base/_header.less";
+@import './base/_footer.less';
+
+@import './content/_home_page_content.less';
+@import './common/configskin/_skin.less';
+
+
+body{
+    background-color: #f7f7f7;
+}
+
+//-------------------------------TOP Header
+header{
+    background: #000000a1;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-left{
+    padding: 22px 0;
+}
+
+header{
+    nav{
+        height: 100px;
+        padding: 23px 0;
+        ul{
+            li{
+                display: inline;
+                a{
+                    display: inline-block;
+                    padding: 0 25px;
+                    text-transform: capitalize;
+                    color: white;
+                }
+                a:first-child{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.nav-right{
+    height: 100%;
+    a{
+        padding: 0 15px;
+        border-right: 2px solid;
+        color:white;
+    }
+    a:last-child{
+        border-right: 0;
+    }
+
+    a:hover{
+        color: @red;
+        border-right-color: white;
+    }
+}
+//-------------------------------End - NAVBAR
+
+//-------------------------------Banner-Top
+.banner-top{
+    background: url(../images/slide_01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    //position: relative;
+    .bnt-img{
+        padding-top: 300px;
+        padding-bottom: 318px;
+
+        .bnt-i-title{
+            width: 40%;
+            color: white;    
+    
+            h1{
+                padding-bottom: 15px;
+            }
+    
+            h2{
+                padding: 15px 0;
+            }
+    
+            p{
+                margin: 40px auto 60px;
+                line-height: 20px;
+            }
+        }
+    }
+    
+}
+
+//-------------------------------End - Banner-Top
+
+//-------------------------------Banner
+.minus-bn-top {
+    margin-top: -80px;
+}
+
+.banner{
+    z-index: 1;
+    padding-bottom: 120px;
+
+    .bn-img{
+        width: 100%/3;
+        display: inline-block;   
+    }
+
+    .bn-default{
+        width: 100%/3; 
+        display: inline-block; 
+        background: white; 
+
+        .bn-df-title{
+            width: 80%;
+
+            h4{
+                margin: 22px 0 25px;
+                text-transform: uppercase;
+            }
+
+            p{
+                padding: 4px 0;
+                color: @grey;
+            }
+        }
+    }
+}
+
+.d-table{
+    display: table;
+}
+
+.bn-shadow{
+    -webkit-box-shadow: 0px 3px 7px 2px rgba(192, 114, 114, 44%);
+    -moz-box-shadow: 0px 3px 7px 2px rgba(0,0,0,44%);
+    box-shadow: 0px 3px 7px 2px rgba(0,0,0,44%);
+}
+
+//-------------------------------End - Banner
+
+
+//-------------------------------Product
+.product{
+    background-color: #f7f7f7;
+    margin-bottom: 60px;
+}
+
+.btn-border{
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+}
+
+.prd-nav{
+    margin-bottom: 40px;
+
+    nav{
+        .nav-tabs{
+            
+            a{
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-transform: uppercase;
+            }
+            a:hover{
+                border-color: transparent;
+            }
+
+            a.active{
+                color: @red;
+                border-color: transparent;
+                border-bottom-color: @red;
+                background-color: transparent;
+                border-bottom: 2px solid;
+            }
+        }
+    }
+}
+
+.prd-item{
+    border-bottom: 47px solid white;
+    background-color: white;
+
+    .prd-i-icon{
+        position: relative;
+
+        .prd-i-btn{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: none;
+            
+            a{
+                margin-bottom: 15px;
+                color: @grey;
+            }
+
+            a:hover{
+                color: white;
+                background-color: @red;
+            }
+        }
+    }
+
+    .prd-i-title{
+        padding: 30px;
+
+        a{
+            margin-bottom: 15px;
+        }
+
+        b{
+            padding: 5px 0;
+        }
+    }
+
+    &:hover .prd-i-icon .prd-i-btn{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.prd-item:hover{
+    border-bottom-color: #f7f7f7;
+}
+
+//-------------------------------End - Product
+
+//-------------------------------Banner Mid
+.minus-banner-mid{
+    margin-top: -266px;
+    padding-top: 266px;
+    background: white;
+}
+
+.banner-mid{
+    padding: 100px 0;
+    background: url(../images/bnSp_10.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .bn-mid-title{
+        padding-left: 170px;
+
+        h3{
+            margin-bottom: 40px;
+        }
+
+        p{
+            color: @grey;
+        }
+
+        button{
+            margin: 40px;
+        }
+    }
+}
+
+
+//-------------------------------End Banner Mid
+
+//-------------------------------Review
+
+.review{
+    padding-top: 50px;
+    background: white;
+    padding-bottom: 100px;
+
+    .slick-dots{
+        background: white;
+        border: 0;
+        bottom: auto;
+
+        li{
+            button:before{
+                font-size: 10px;
+                line-height: 0;
+            }
+        }
+
+        li.slick-active button:before{
+            font-size: 10px;
+        }
+    }
+
+    .slick-dots li.slick-active button:before{
+        color: @red;
+    }
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.rv-item{
+
+    h3{
+        margin: 50px 0;
+    }
+
+    img{
+        margin: 10px 0;
+        height: 80px;
+        width: 80px;
+    }
+
+    a{
+        color: @grey;
+        margin:20px 0;
+    }
+
+    p{
+        color: @grey;
+        margin-bottom: 44px;
+    }
+
+    h4{
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+}
+//-------------------------------End Review
+
+//-------------------------------New
+.news{
+    background: white;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 27px;
+
+    h3{
+        margin: 60px 0;
+    }
+
+    hr{
+        border-top: 2px solid #cccccc;
+        margin-bottom: 40px;
+    }
+}
+
+.new-item{
+
+    // .new-i-img{
+
+    // }
+
+    .new-i-title{
+        padding: 29px 0 30px;
+        margin-bottom: 70px;
+
+        a{
+            color: black;
+            font-family: @poppin-bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    }
+}
+//-------------------------------End New
+
+
+//-------------------------------Footer
+footer{
+    padding-top: 100px;
+    background: @black;
+}
+
+.ft-top{
+    border-bottom: 1px solid @grey;
+
+    p{
+        width: 65%;
+        padding: 40px 0 46px;
+        color: @grey-ft;
+    }
+
+    a{
+        font-size: 18px;
+        color: @grey-ft;
+        padding-bottom: 54px;
+        margin-right: 45px;
+    }
+}
+
+.ft-mid{
+    padding-top: 60px;
+    padding-bottom: 35px;
+    
+    h4{
+        text-transform: uppercase;
+        color: white;
+        margin: 20px 0;
+    }
+
+    ul{
+
+        li{
+
+            p{
+                color: @grey-ft;
+                padding: 15px 0;
+            }
+        }
+    }
+}
+
+.ft-bottom{
+    background: #111111;
+
+    p{
+        color: @grey-ft;
+        padding: 20px 0;   
+    }
+}
+//-------------------------------End Footer
+
+//-------------------------------Back To Top
+.scroll-top {
+    transform: rotate(-90deg);
+    letter-spacing: .2em;
+    position: fixed;
+    transition: all .3s;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    bottom: -100px;
+    right: 10px;
+    cursor: pointer;
+    i{
+        font-size: 15px;
+    }
+}
+
+a.scroll-top:hover{
+    color: @red;
+}
+
+a.scroll-top:hover:before{
+    background: @red;
+}
+
+
+a.bottom-100{
+    bottom: 100px;
+}
+
+a.scroll-top:before {
+    content: "";
+    height: 14px;
+    width: 1.5px;
+    background: black;
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -20px;
+}
+
+//-------------------------------End Back To Top
+
+
+//-------------------------------Reposive
+
+    //---------------------------Menu Mobile
+    .icon-nav {
+        display: none;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 20px;
+        top: 35%;
+        background: transparent;
+        cursor: pointer;
+        z-index: 1;
+        color: white;
+    }
+    button:focus.icon-nav{
+        outline: none;
+    }
+
+    //---------------------------Media Query
+    /* Mobile: width < 740px */
+    @media only screen and (max-width: 46.1875em){
+
+    }
+
+    /* Tablet: width >= 740px and width < 1024 */
+    @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    }
+
+    /* PC: width >= 740px and width < 1024 */
+    // @media only screen and (min-width: 64em) {
+
+    // }
+
+    /* 2k PC: width >= 740px and width < 1024 */
+    @media only screen and (min-width: 75em) {
+        .container{
+            max-width: 1184px;
+        }
+
+        header nav ul li a{
+            padding-top: 10px;
+            margin-left: -8px;
+            margin-right: 30px;
+        }
+
+        .nav-right a{
+            padding-top: 4px;
+        }
+
+        .nav-right {
+            margin-right: -13px;
+        }
+    }
+
+    //---------------------------End Media Query
+
+//-------------------------------End Reposive
